@@ -5,7 +5,7 @@ import { FilterCityPipe } from './filter-city.pipe';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { SearchCityComponent } from './search-city/search-city.component';
-import { WeatherCardComponent } from '../weather-card/weather-card.component';
+import { WeatherCardComponent } from './weather-card/weather-card.component';
 
 
 
