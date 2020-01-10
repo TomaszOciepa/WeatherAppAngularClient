@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'search-city',
@@ -29,9 +30,14 @@ export class SearchCityComponent implements OnInit {
     'Sopot',
   ]
 
+  
+
   myCity(city){
-    console.log(city)
-  } 
+    this.emiter.emit(city)
+  }
+  
+  @Output("selectedCity")
+  emiter = new EventEmitter();
   
   constructor() { }
 
