@@ -14,8 +14,8 @@
         
         <div class="row">
             <div class="col4 mr-3 ml-3">
-                <div class="day"><span>{{day}}</span></div>
-                <div class="date"><span>{{date}}</span></div>
+                <div class="day"><span>{{date | date: 'EEEE'}}</span></div>
+                <div class="date"><span>{{date | date: 'dd-MM-yyyy'}}</span></div>
                 <div class="wind"><span>Wiatr {{wind}} m/s</span></div>
                 <div class="clouds"><span>Zachmurzenie {{clouds}} %</span></div>
                 <div class="rain"><span>Deszcz {{rain}} mm</span></div>
@@ -32,9 +32,8 @@
                 <div class="pressure"><span>{{pressure}} hpa</span></div>
                 <div class="temp"><span>{{temp}} &deg;C</span></div>
                 <div class="sun">
-                    <!-- <i class="fas fa-cloud-sun"></i> <span>{{sunrise | date:'hh:mm' :'+133'}}</span><br> -->
-                    <i class="fas fa-cloud-sun"></i> <span>{{sunrise}}</span><br>
-                    <i class='fas fa-cloud-moon'></i> <span>{{sunset}}</span>
+                    <i class="fas fa-cloud-sun"></i> <span>{{sunrise * 1000| date:'HH:mm' :'UTC+1'}}</span><br>
+                    <i class='fas fa-cloud-moon'></i> <span>{{sunset * 1000| date:'HH:mm' :'UTC+1'}}</span>
                 </div>
             </div>
         </div>

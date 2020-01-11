@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   
   providers: [
-    {provide: LOCALE_ID, useValue: 'pl' }
+  
   ],
   bootstrap: [AppComponent]
 })

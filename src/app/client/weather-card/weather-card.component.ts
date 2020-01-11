@@ -14,7 +14,6 @@ export class WeatherCardComponent implements OnInit {
   currentWeather: CurrentWeather
 
   name
-  day
   date
   wind
   clouds
@@ -29,13 +28,11 @@ export class WeatherCardComponent implements OnInit {
   description
   icon
   
-
   @Input('selectedCity')
   set setSelectedCity(city){
       this.http.getCurrentWeather(city).subscribe(response =>{
           this.name = response.name;
-          this.day = "Piątek";
-          this.date = "10.01.2020";
+          this.date = Date.now();
           this.wind = response.wind.speed;
           this.clouds = response.clouds.all;
           this.rain = 20;
@@ -48,7 +45,7 @@ export class WeatherCardComponent implements OnInit {
           this.sunset = response.sys.sunset;
           this.description = response.weather[0].description;
           this.icon = "http://openweathermap.org/img/wn/"+response.weather[0].icon+"@2x.png";
-            // this.sunrise=  new DatePipe('en').transform(response.sys.sunrise, 'hh-mm', 'GMT-1')
+            // this.sunrise=  new DatePipe('en').transform(response.sys.sunrise, 'hh-mm', 'GMT+1')
       })
       
   }
