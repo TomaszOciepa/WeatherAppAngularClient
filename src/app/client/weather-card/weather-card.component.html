@@ -14,12 +14,11 @@
         
         <div class="row">
             <div class="col4 mr-3 ml-3">
-                <div class="day"><span>{{date | date: 'EEEE'}}</span></div>
+                <div class="day"><span>{{date | date: 'EEEE' :'UTC+1' :'pl'}}</span></div>
                 <div class="date"><span>{{date | date: 'dd-MM-yyyy'}}</span></div>
-                <div class="wind"><span>Wiatr {{wind}} m/s</span></div>
-                <div class="clouds"><span>Zachmurzenie {{clouds}} %</span></div>
-                <div class="rain"><span>Deszcz {{rain}} mm</span></div>
-                <div class="humadity"><span>Wilgotność {{humidity}} %</span></div>
+                <div class="wind"><span>WIATR {{wind}} m/s</span></div>
+                <div class="clouds"><span>ZACHMURZENIE {{clouds}} %</span></div>
+                <div class="humadity"><span>WILGOTNOŚĆ {{humidity}} %</span></div>
             </div>
             <div class="col4 ml-3 mr-3">
                 <div class="description">

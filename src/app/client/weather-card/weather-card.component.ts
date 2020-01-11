@@ -17,7 +17,6 @@ export class WeatherCardComponent implements OnInit {
   date
   wind
   clouds
-  rain
   humidity
   pressure
   temp
@@ -35,7 +34,6 @@ export class WeatherCardComponent implements OnInit {
           this.date = Date.now();
           this.wind = response.wind.speed;
           this.clouds = response.clouds.all;
-          this.rain = 20;
           this.humidity = response.main.humidity;
           this.pressure = response.main.pressure;
           this.temp = Math.round(response.main.temp);
