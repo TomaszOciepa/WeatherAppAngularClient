@@ -9,7 +9,32 @@ import { ForecastWeather } from '../model/forecast-weather';
   styleUrls: ['./forecast-weather-card.component.css']
 })
 export class ForecastWeatherCardComponent implements OnInit {
-
+  
+  title = 'Prognoza na 16 dni';
+  customOptions: any = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 300,
+    navText: ['<-', '->'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
 
   forecastList: ForecastWeather
     

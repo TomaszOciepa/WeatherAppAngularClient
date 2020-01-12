@@ -1,13 +1,17 @@
-
-
-<div *ngIf="forecastList">
-    <div *ngFor="let forecast of forecastList.list">
-
-        {{forecast.main.temp | number:'1.0-0'}} 
-        <img src="http://openweathermap.org/img/wn/{{forecast.weather[0].icon}}@2x.png">
-        {{forecast.dt * 1000| date:'EEEE dd MMMM HH:00' :'UTC+1' :'pl'}}
-    </div>
-</div>
-
-
-
+<div style="text-align:center">
+    <h2>
+      {{ title }}
+    </h2>
+      <owl-carousel-o [options]="customOptions">
+        <div *ngIf="forecastList">
+          <div *ngFor="let forecast of forecastList.list">
+            <ng-template carouselSlide>
+                <div>{{forecast.dt * 1000| date:'dd MMMM' :'UTC+1' :'pl'}}</div>
+                <div>{{forecast.dt * 1000| date:'EE HH:00' :'UTC+1' :'pl'}} <br></div>
+                <img src="http://openweathermap.org/img/wn/{{forecast.weather[0].icon}}@2x.png" height="170" weight="120">
+                <div>{{forecast.main.temp | number:'1.0-0'}} &deg;C</div>
+            </ng-template>  
+          </div>
+        </div>
+    </owl-carousel-o>
+  </div>

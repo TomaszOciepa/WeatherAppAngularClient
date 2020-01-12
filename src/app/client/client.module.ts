@@ -8,6 +8,10 @@ import { SearchCityComponent } from './search-city/search-city.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { WeatherApiService } from './weather-api.service';
 import { ForecastWeatherCardComponent } from './forecast-weather-card/forecast-weather-card.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 @NgModule({
@@ -22,6 +26,8 @@ import { ForecastWeatherCardComponent } from './forecast-weather-card/forecast-w
     CommonModule,
     FormsModule,
     BrowserModule,
+    CarouselModule,
+    BrowserAnimationsModule
     
   ], 
   exports: [
