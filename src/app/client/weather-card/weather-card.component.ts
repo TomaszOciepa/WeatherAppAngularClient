@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Optional } from '@angular/core';
-import { CurrentWeather } from '../model/current-weather';
 import { WeatherApiService } from '../weather-api.service';
-import { DatePipe } from '@angular/common';
+
 
 
 @Component({
@@ -10,8 +9,6 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./weather-card.component.css']
 })
 export class WeatherCardComponent implements OnInit {
-
-  currentWeather: CurrentWeather
 
   name
   date
@@ -28,9 +25,9 @@ export class WeatherCardComponent implements OnInit {
   icon
   
   @Input('selectedCity')
-  set setSelectedCity(city){
+  set setCurrentWeather(city){
       this.http.getCurrentWeather(city).subscribe(response =>{
-          this.name = response.name;
+          this.name = city;
           this.date = Date.now();
           this.wind = response.wind.speed;
           this.clouds = response.clouds.all;
@@ -43,7 +40,6 @@ export class WeatherCardComponent implements OnInit {
           this.sunset = response.sys.sunset;
           this.description = response.weather[0].description;
           this.icon = "http://openweathermap.org/img/wn/"+response.weather[0].icon+"@2x.png";
-            // this.sunrise=  new DatePipe('en').transform(response.sys.sunrise, 'hh-mm', 'GMT+1')
       })
       
   }

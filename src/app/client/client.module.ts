@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SearchCityComponent } from './search-city/search-city.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 import { WeatherApiService } from './weather-api.service';
-
+import { ForecastWeatherCardComponent } from './forecast-weather-card/forecast-weather-card.component';
 
 
 @NgModule({
@@ -16,14 +16,16 @@ import { WeatherApiService } from './weather-api.service';
     FilterCityPipe,
     SearchCityComponent,
     WeatherCardComponent,
+    ForecastWeatherCardComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    
   ], 
   exports: [
-    ClientComponent
+    ClientComponent,
   ],
   providers: [
     WeatherApiService
