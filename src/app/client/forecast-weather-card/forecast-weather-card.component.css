@@ -1,0 +1,12 @@
+.my-title{
+    color: #dfddda;
+}
+
+.forecast-weather{
+    -webkit-box-shadow: 3px 3px 21px 0px rgba(50, 50, 50, 0.96);
+    -moz-box-shadow:    3px 3px 21px 0px rgba(50, 50, 50, 0.96);
+    box-shadow:         3px 3px 21px 0px rgba(50, 50, 50, 0.96);
+    text-align:center;
+    background-color: #252526;
+    padding: 10px;
+}

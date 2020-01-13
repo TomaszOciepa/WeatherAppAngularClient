@@ -1,15 +1,20 @@
-<div style="text-align:center">
-    <h2>
-      {{ title }}
-    </h2>
+<div class="forecast-weather">
+    <h2 class="text-left my-title">{{ title }} </h2>
       <owl-carousel-o [options]="customOptions">
         <div *ngIf="forecastList">
-          <div *ngFor="let forecast of forecastList.list">
+          <div *ngFor="let forecast of forecastList.list; let i = index">
             <ng-template carouselSlide>
-                <div>{{forecast.dt * 1000| date:'dd MMMM' :'UTC+1' :'pl'}}</div>
+              <div class="row">
+                  <div class="col-1" style="font-size: 18px;">
+                    <span>{{i +1}}</span>
+                  </div>
+                  <div class="col-11">
+                    <div>{{forecast.dt * 1000| date:'dd MMMM' :'UTC+1' :'pl'}}</div>
                 <div>{{forecast.dt * 1000| date:'EE HH:00' :'UTC+1' :'pl'}} <br></div>
                 <img src="http://openweathermap.org/img/wn/{{forecast.weather[0].icon}}@2x.png" height="170" weight="120">
                 <div>{{forecast.main.temp | number:'1.0-0'}} &deg;C</div>
+                  </div>
+              </div>
             </ng-template>  
           </div>
         </div>

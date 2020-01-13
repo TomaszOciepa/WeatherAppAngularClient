@@ -1,0 +1,20 @@
+.page-content{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #1E1E1E;
+}
+
+.my-title{
+    color: #dfddda;
+}
+
+.search{
+    height: 350px;
+    width: 300px;
+    float: left;
+}
+
+.my-card{
+    height: 350px;
+    width: 100%;
+}
