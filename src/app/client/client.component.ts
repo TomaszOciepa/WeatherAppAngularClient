@@ -9,17 +9,28 @@ import { Component, OnInit } from '@angular/core';
 export class ClientComponent implements OnInit {
 
 
-
+  clock: number
   selectedCity: string
 
   getSelectedCity(city){
     this.selectedCity = city;
   }
 
+  getTime(){
+    return Date.now()
+  }
+
+  setTime(){
+    setInterval(()=>{
+      this.clock = this.getTime()
+    }, 1000)
+  }
+
   constructor() { }
 
   ngOnInit() {
   this.getSelectedCity("Gdańsk")
+  this.setTime()
   }
 
 }

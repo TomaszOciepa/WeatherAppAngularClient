@@ -1,5 +1,6 @@
 <div class="page-content">
     <h1 class="my-title">Pogoda <span>{{selectedCity}}</span></h1>
+    <div class="clock"><span class="text-left">{{clock | date:'HH:mm:ss' :'UTC+1'}}</span></div>
         <div class="search">
             <search-city (selectedCity)="getSelectedCity($event)"></search-city>
         </div>

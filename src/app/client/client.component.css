@@ -2,6 +2,7 @@
     width: 1000px;
     margin: 0 auto;
     background-color: #1E1E1E;
+    position: relative;
 }
 
 .my-title{
@@ -17,4 +18,15 @@
 .my-card{
     height: 350px;
     width: 100%;
+}
+
+.clock{
+    text-align: left;
+    width: 100px;
+    color: #88caf0;
+    font-size: 30px;
+    position: absolute;
+    right: 3px;
+    top: 1px;
+    
 }
