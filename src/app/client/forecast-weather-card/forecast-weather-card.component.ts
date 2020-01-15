@@ -42,7 +42,6 @@ export class ForecastWeatherCardComponent implements OnInit {
   set setForecastWeather(city){
     this.http.getForecastWeather(city).subscribe(response => {
       this.forecastList = response;
-      console.log(this.forecastList.list[0].main.temp)
     })
   }
 

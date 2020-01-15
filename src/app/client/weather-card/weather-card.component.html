@@ -1,5 +1,10 @@
 <div class="weather-card card" >
     <div class="row">
+        <div class="my_favorit">
+            <div *ngIf="favorite"><i class="fas fa-star"></i><span style="visibility: hidden;">{{name}}</span></div>
+            <div *ngIf="!favorite"><a (click)="setFavoriteCity(name)"><i class="far fa-star"></i></a></div>
+        </div>
+
         <div class="sun text-center">
             <i class="fas fa-cloud-sun color-out"></i> <span  class="color-in">{{sunrise * 1000| date:'HH:mm' :'UTC+1'}} </span>
             <i class='fas fa-cloud-moon color-out'></i> <span  class="color-in">{{sunset * 1000| date:'HH:mm' :'UTC+1'}}</span>
@@ -9,9 +14,9 @@
             <div class="weather-card-left ml-3">
                 <div class="day"><span>{{date | date: 'EEEE' :'UTC+1' :'pl'}}</span></div>
                 <div class="date color-in"><span>{{date | date: 'dd-MM-yyyy'}}</span></div>
-                <div class="wind color-out">Wiatr <span class="color-in">{{wind}}</span> <span class="color-unit">m/s</span></div>
-                <div class="clouds color-out">Zachmurzenie <span class="color-in">{{clouds}}</span> <span class="color-unit">%</span></div>
-                <div class="humadity color-out">Wilgotoność <span class="color-in">{{humidity}}</span> <span class="color-unit">%</span></div>
+                <div class="wind color-out">Wiatr <span class="color-in">{{wind}} </span> <span class="color-unit">m/s</span></div>
+                <div class="clouds color-out">Zachmurzenie <span class="color-in">{{clouds}} </span> <span class="color-unit">%</span></div>
+                <div class="humadity color-out">Wilgotoność <span class="color-in">{{humidity}} </span> <span class="color-unit">%</span></div>
             </div>
             <div class="weather-card-center ml-3 mr-3">
                 <div class="description">

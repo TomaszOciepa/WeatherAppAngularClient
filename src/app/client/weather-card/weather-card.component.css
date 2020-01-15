@@ -111,3 +111,15 @@
     text-align: right;
 }
 
+.my_favorit{
+    color:#ffff00;
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+}
+
+.my_favorit a:hover{
+    color: #e6d1af;
+    cursor: pointer;
+}

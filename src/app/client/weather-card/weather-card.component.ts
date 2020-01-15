@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Optional } from '@angular/core';
+import { Component, OnInit, Input, Optional, Output, EventEmitter } from '@angular/core';
 import { WeatherApiService } from '../weather-api.service';
 
 
@@ -9,6 +9,24 @@ import { WeatherApiService } from '../weather-api.service';
   styleUrls: ['./weather-card.component.css']
 })
 export class WeatherCardComponent implements OnInit {
+  
+  @Input('star')
+  favorite
+
+  @Output('deleteFavoriteCity')
+  emiterDeleteFavoriteCity = new EventEmitter();
+
+  deleteFavoriteCity(city){
+    this.emiterDeleteFavoriteCity.emit(city);
+  }
+
+  @Output('addMyFavoritCity')
+  emiterSetFavoriteCity = new EventEmitter();
+
+  setFavoriteCity(city){
+    this.emiterSetFavoriteCity.emit(city);
+  }  
+
 
   name
   date
@@ -23,7 +41,7 @@ export class WeatherCardComponent implements OnInit {
   sunset
   description
   icon
-  
+
   @Input('selectedCity')
   set setCurrentWeather(city){
       this.http.getCurrentWeather(city).subscribe(response =>{

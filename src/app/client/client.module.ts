@@ -10,7 +10,8 @@ import { WeatherApiService } from './weather-api.service';
 import { ForecastWeatherCardComponent } from './forecast-weather-card/forecast-weather-card.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxWebstorageModule} from 'ngx-webstorage';
+import { MyCityComponent } from './my-city/my-city.component';
 
 
 
@@ -21,14 +22,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchCityComponent,
     WeatherCardComponent,
     ForecastWeatherCardComponent,
+    MyCityComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     BrowserModule,
     CarouselModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    NgxWebstorageModule.forRoot(),
   ], 
   exports: [
     ClientComponent,

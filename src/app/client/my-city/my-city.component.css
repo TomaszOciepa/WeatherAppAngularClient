@@ -1,0 +1,33 @@
+.my_favorit{
+    color:#ffff00;
+    font-size: 20px;
+    position: absolute;
+    left: 300px;
+    z-index: 1;
+}
+
+.my_favorit a:hover{
+    color: #e6d1af;
+    cursor: pointer;
+}
+
+.city-search, .city-search a{
+    color: #dfddda;
+}
+
+.city-search a:hover{
+    color: #e6d1af;
+    cursor: pointer;
+}
+
+.my-search{
+    overflow:hidden;
+    height: 300px;
+    width: 18rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    background-color: #252526;
+    -webkit-box-shadow: 3px 3px 14px 0px rgba(50, 50, 50, 0.96);
+    -moz-box-shadow:    3px 3px 14px 0px rgba(50, 50, 50, 0.96);
+    box-shadow:         3px 3px 14px 0px rgba(50, 50, 50, 0.96);
+}

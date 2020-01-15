@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'ngx-webstorage';
 
 
 @Component({
@@ -8,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
 
+  
+  myCities = []
+setMyCities(list){
+  this.myCities = list
+  console.log("kupa "+this.myCities)
+}
+
+  addFavoritCity
+
+  addMyFavoritCity(c){
+    this.addFavoritCity = c;
+  }
+
+  star
 
   clock: number
   selectedCity: string
+
+  setStar(s){
+    this.star = s
+  }
 
   getSelectedCity(city){
     this.selectedCity = city;
@@ -26,10 +45,21 @@ export class ClientComponent implements OnInit {
     }, 1000)
   }
 
-  constructor() { }
+  constructor(private localStorage: LocalStorageService) { }
 
   ngOnInit() {
-  this.getSelectedCity("Gdańsk")
+
+    // init
+    var myTab = []
+    myTab = this.localStorage.retrieve('cities')
+    if(myTab.length > 1){
+      this.getSelectedCity(myTab[1])    
+    } else(
+      this.getSelectedCity("Warszawa")
+    )
+      
+    
+  
   this.setTime()
   }
 
