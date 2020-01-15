@@ -64,14 +64,18 @@ export class MyCityComponent implements OnInit {
 
   checkCitiesList(city){
     var result = false;
-    setTimeout
-    this.myCities.forEach((item)=>{
-       if(city === item){
-          return result = true
-       }    
-   })
 
-    this.setStar(result)    
+    if(this.myCities !== null){
+      this.myCities.forEach((item)=>{
+        if(city === item){
+           return result = true
+        }    
+    })
+    this.setStar(result)
+    }
+  
+
+        
  }
 
   constructor(private localStorage: LocalStorageService) { }
