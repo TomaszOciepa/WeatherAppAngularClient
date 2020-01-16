@@ -53,7 +53,7 @@ setMyCities(list){
     var myTab = []
     myTab = this.localStorage.retrieve('cities')
     if(myTab !== null && myTab.length > 1){
-      this.getSelectedCity(myTab[1])    
+      this.getSelectedCity(myTab[0])    
     } else(
       this.getSelectedCity("Warszawa")
     )

@@ -9,8 +9,9 @@ import {LocalStorageService, SessionStorageService} from 'ngx-webstorage';
   styleUrls: ['./my-city.component.css']
 })
 export class MyCityComponent implements OnInit {
+
   
-  myCities = []
+  myCities = [];
 
   @Input('addFavoritCity')
   set addFavoritCity(s){
@@ -20,16 +21,23 @@ export class MyCityComponent implements OnInit {
   }
 
   addMyCity(mCity){
-    this.myCities.push(mCity)
-    this.myCities = this.localStorage.retrieve('cities')
-    this.localStorage.store('cities', this.myCities )
+
+      if(this.localStorage.retrieve('cities') !== null){
+        this.myCities = this.localStorage.retrieve('cities')
+      }
+      
+      if(mCity){
+        this.myCities.push(mCity)
+        this.localStorage.store('cities', this.myCities )
+      }
+      
   }
 
   
   removeCity(indexC){
     var newFavorit =[]
 
-    delete this.myCities[indexC +1]
+    delete this.myCities[indexC]
     this.myCities.forEach((index, item)=>{
       if(indexC !== index){
 
@@ -81,7 +89,7 @@ export class MyCityComponent implements OnInit {
   constructor(private localStorage: LocalStorageService) { }
 
   ngOnInit() {
-    
+    // this.myCities = this.localStorage.retrieve('cities')
   }
 
 }

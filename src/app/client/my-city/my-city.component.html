@@ -1,7 +1,7 @@
 
     <div class="card-body my-search">
         <ul>
-              <li *ngFor="let c of myCities | slice:1; let i = index;" class="mt-3 city-search">
+              <li *ngFor="let c of myCities let i = index;" class="mt-3 city-search">
                     <a (click)="myCity(c)">{{c}}</a>
                      <a (click)="removeCity(i)">
                          <span style="visibility: hidden;">{{i}}</span>
