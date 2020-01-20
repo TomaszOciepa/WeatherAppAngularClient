@@ -10,12 +10,6 @@ import { LocalStorageService } from 'ngx-webstorage';
 export class ClientComponent implements OnInit {
 
   
-  myCities = []
-setMyCities(list){
-  this.myCities = list
-  console.log("kupa "+this.myCities)
-}
-
   addFavoritCity
 
   addMyFavoritCity(c){
@@ -52,7 +46,7 @@ setMyCities(list){
     // init
     var myTab = []
     myTab = this.localStorage.retrieve('cities')
-    if(myTab !== null && myTab.length > 1){
+    if(myTab !== null && myTab.length >= 1){
       this.getSelectedCity(myTab[0])    
     } else(
       this.getSelectedCity("Warszawa")

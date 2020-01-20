@@ -17,7 +17,6 @@ export class MyCityComponent implements OnInit {
   set addFavoritCity(s){
     this.addMyCity(s)
     this.checkCitiesList(s)
-    
   }
 
   addMyCity(mCity){
@@ -38,7 +37,7 @@ export class MyCityComponent implements OnInit {
     var newFavorit =[]
 
     delete this.myCities[indexC]
-    this.myCities.forEach((index, item)=>{
+    this.myCities.forEach((index)=>{
       if(indexC !== index){
 
         newFavorit.push(index)
@@ -48,7 +47,14 @@ export class MyCityComponent implements OnInit {
     this.myCities = newFavorit;
     this.setStar(false)
     this.localStorage.store('cities', this.myCities )
-    
+    this.removeFavoritCity()
+  }
+
+  @Output("removeFavoritCity")
+  emiterRemoveFavoritCity = new EventEmitter();
+
+  removeFavoritCity(){
+    this.emiterRemoveFavoritCity.emit("")
   }
 
   @Output("selectedCity")

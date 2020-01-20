@@ -23,8 +23,8 @@ export class WeatherCardComponent implements OnInit {
   @Output('addMyFavoritCity')
   emiterSetFavoriteCity = new EventEmitter();
 
-  setFavoriteCity(city){
-    this.emiterSetFavoriteCity.emit(city);
+  setFavoriteCity(){
+    this.emiterSetFavoriteCity.emit(this.name);
   }  
 
 
