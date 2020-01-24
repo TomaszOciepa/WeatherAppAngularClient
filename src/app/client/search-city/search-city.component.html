@@ -1,10 +1,10 @@
 <div class="card-body my-search">
       <!-- <label class="label-search">Wyszukaj miasto:</label> -->
-      <input type="text" class="form-control" [(ngModel)]="searchCity" placeholder="Wyszukaj miasto">
+      <input type="text" id="search_city" class="form-control" [(ngModel)]="searchCity" placeholder="Wyszukaj miasto">
       <ul>
             <li *ngFor="let c of characters | filterCity : searchCity" class="mt-3 city-search">
                   <a (click)="myCity(c)">{{c}}</a> 
             </li>
       </ul>
 </div>
-        
+
