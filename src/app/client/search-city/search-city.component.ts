@@ -76,7 +76,6 @@ export class SearchCityComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("długość "+this.characters.length)
   }
 
 }
