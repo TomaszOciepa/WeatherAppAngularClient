@@ -64,7 +64,7 @@ export class SearchCityComponent implements OnInit {
     "Zakopane", "Żabno", "Żuromin", "Żnin", "Żerków", "Żelechów", "Żyrardów", "Żagań", "Żychlin", "Żarów", "Żmigród", "Żarki", "Żurawica", "Zielona Góra",
   ]
 
-  
+  searchCity
 
   myCity(city){
     this.emiter.emit(city)

@@ -22,7 +22,7 @@
             
         </div>
         <div class="my-card">
-            <weather-card (deleteFavoriteCity)="deleteMyFavoriteCity($event)" (addMyFavoritCity)="addMyFavoritCity($event)" [star]="star" [selectedCity]="selectedCity"></weather-card>
+            <weather-card (addMyFavoritCity)="addMyFavoritCity($event)" [star]="star" [selectedCity]="selectedCity"></weather-card>
         </div>
         <forecast-weather-card [selectedCity]="selectedCity"></forecast-weather-card>
         
