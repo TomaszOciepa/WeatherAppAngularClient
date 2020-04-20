@@ -10,7 +10,7 @@ import { ForecastWeather } from '../model/forecast-weather';
 })
 export class ForecastWeatherCardComponent implements OnInit {
   
-  title = 'Prognoza na 5 dni';
+  title = 'Prognoza na 5 dni (z prognozą co 3h)';
   customOptions: any = {
     loop: true,
     mouseDrag: false,
