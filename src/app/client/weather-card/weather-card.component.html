@@ -2,10 +2,10 @@
   <div class="row">
     <div class="my_favorit">
       <!-- <div *ngIf="favorite"><i class="fas fa-star"></i></div> -->
-      <div *ngIf="favorite"><i class="fa-solid fa-star"></i></div>
+      <div *ngIf="favorite"><mat-icon>favorite</mat-icon></div>
       <!-- <div *ngIf="!favorite"><a (click)="setFavoriteCity()"><i class="far fa-star"></i></a></div> -->
       <div *ngIf="!favorite">
-        <a (click)="setFavoriteCity()"><i class="fa-regular fa-star"></i></a>
+        <a (click)="setFavoriteCity()"><mat-icon>heart_plus</mat-icon></a>
       </div>
     </div>
     <div class="sun">

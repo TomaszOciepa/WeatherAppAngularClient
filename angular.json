@@ -128,5 +128,8 @@
         }
       }
     }},
-  "defaultProject": "WeaterAppAngularClient"
+  "defaultProject": "WeaterAppAngularClient",
+  "cli": {
+    "analytics": "d02c305a-bfd3-49b4-a1fe-0b6333f13f91"
+  }
 }
