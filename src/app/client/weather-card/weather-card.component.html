@@ -1,21 +1,21 @@
 <div class="weather-card card">
   <div class="row">
     <div class="my_favorit">
-      <!-- <div *ngIf="favorite"><i class="fas fa-star"></i></div> -->
-      <div *ngIf="favorite"><mat-icon>favorite</mat-icon></div>
-      <!-- <div *ngIf="!favorite"><a (click)="setFavoriteCity()"><i class="far fa-star"></i></a></div> -->
+      <div *ngIf="favorite">
+        <mat-icon>favorite</mat-icon>
+      </div>
       <div *ngIf="!favorite" class="my_favorit">
         <a (click)="setFavoriteCity()"><mat-icon>add_box</mat-icon></a>
       </div>
     </div>
     <div class="sun">
-      <i class="fas fa-cloud-sun color-out"></i>
+      <mat-icon>sunny</mat-icon>
       <span class="color-in"
-        >{{ sunrise * 1000 | date : "HH:mm" : "UTC+1" }}
+        >{{ sunrise * 1000 | date : "HH:mm" : "UTC+2" }}
       </span>
-      <i class="fas fa-cloud-moon color-out"></i>
+      <mat-icon>dark_mode</mat-icon>
       <span class="color-in">{{
-        sunset * 1000 | date : "HH:mm" : "UTC+1"
+        sunset * 1000 | date : "HH:mm" : "UTC+2"
       }}</span>
     </div>
     <div class="name text-center">

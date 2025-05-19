@@ -1,12 +1,12 @@
-
-    <div class="card-body my-search">
-        <ul>
-              <li *ngFor="let c of myCities let i = index;" class="mt-3 city-search">
-                    <a (click)="myCity(c)">{{c}}</a>
-                     <a (click)="removeCity(i)">
-                         <span style="visibility: hidden;">{{i}}</span>
-                        <i style="position: absolute; left: 260px;" class="fas fa-trash-alt"></i>
-                    </a> 
-              </li>
-        </ul>
-  </div>
+<div class="card-body my-search">
+  <ul>
+    <li *ngFor="let c of myCities; let i = index" class="mt-3 city-search">
+      <a (click)="myCity(c)">{{ c }}</a>
+      <a (click)="removeCity(i)">
+        <span style="visibility: hidden">{{ i }}</span>
+        <!-- <i style="position: absolute; left: 260px;" class="fas fa-trash-alt"></i> -->
+        <mat-icon style="position: absolute; left: 260px">delete</mat-icon>
+      </a>
+    </li>
+  </ul>
+</div>
