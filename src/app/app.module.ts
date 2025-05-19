@@ -8,7 +8,6 @@ import { ClientModule } from "./client/client.module";
 import { HttpClientModule } from "@angular/common/http";
 import { registerLocaleData } from "@angular/common";
 import localePl from "@angular/common/locales/pl";
-import { MatIconModule } from "@angular/material";
 
 registerLocaleData(localePl, "pl");
 
@@ -20,7 +19,6 @@ registerLocaleData(localePl, "pl");
     FormsModule,
     ClientModule,
     HttpClientModule,
-    MatIconModule,
   ],
 
   providers: [],
