@@ -4,7 +4,7 @@
       <!-- <div *ngIf="favorite"><i class="fas fa-star"></i></div> -->
       <div *ngIf="favorite"><mat-icon>favorite</mat-icon></div>
       <!-- <div *ngIf="!favorite"><a (click)="setFavoriteCity()"><i class="far fa-star"></i></a></div> -->
-      <div *ngIf="!favorite">
+      <div *ngIf="!favorite" class="my_favorit">
         <a (click)="setFavoriteCity()"><mat-icon>heart_plus</mat-icon></a>
       </div>
     </div>
