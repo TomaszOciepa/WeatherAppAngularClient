@@ -17,13 +17,6 @@ export class WeatherCardComponent implements OnInit {
   @Input("star")
   favorite;
 
-  // @Output("deleteFavoriteCity")
-  // emiterDeleteFavoriteCity = new EventEmitter();
-
-  // deleteFavoriteCity() {
-  //   this.emiterDeleteFavoriteCity.emit(this.name);
-  // }
-
   @Output("addMyFavoritCity")
   emiterSetFavoriteCity = new EventEmitter();
 
