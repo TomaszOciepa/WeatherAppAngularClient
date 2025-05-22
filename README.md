@@ -1,22 +1,21 @@
-# WeaterAppAngularClient
+# WeatherAppAngularClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+> ⚠️ **Note:** This is a legacy project built with Angular CLI version 8.3.21.  
+> If you're using Node.js version 17 or higher, run the app with the following command to avoid cryptographic errors:
+>
+> ```bash
+> NODE_OPTIONS=--openssl-legacy-provider ng serve
+> ```
 
-# Description
-This application allows you to check the current weather and a 5-day forecast weather for a selected city in Poland.
+## Description
 
-## Development server
+This application allows users to check the current weather and a 5-day forecast for selected cities in Poland.  
+It retrieves weather data using the [OpenWeatherMap API](https://openweathermap.org/api).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development Server
 
-## Code scaffolding
+Run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+NODE_OPTIONS=--openssl-legacy-provider ng serve
+```
